@@ -1,0 +1,41 @@
+# Max Mattern
+# SDEV220 Fall 2022
+# M03 Lab - Case Study: Lists, Functions, and Classes
+# 11/14/22
+
+# Super class containing "type" attribute
+class Vehicle():
+    def __init_(self,type):
+        self.type = type
+
+# Child class inheriting from Vehicle, adding attirbutes (year,make,model,doors,roof) and print method.
+class Automobile(Vehicle):
+    def __init__(self, type, year, make, model, doors, roof):
+        self.type = type
+        self.year = year
+        self.make = make
+        self.model = model
+        self.doors = doors
+        self.roof = roof
+    def out(self):
+        print('Vehicle Type: ' + self.type)
+        print('Year: ' + self.year)
+        print('Make: ' + self.make)
+        print('Model: ' + self.model)
+        print('Number of doors: ' + self.doors)
+        print('Type of roof: ' + self.roof) 
+
+# User input
+a = input('Please enter vehicle type: ')
+b = input('Please enter vehicle year: ')
+c = input('Please enter vehicle make: ')
+d = input('Please enter vehicle model: ')
+e = input('Please enter total number of doors (2 or 4): ')
+f = input('Is the roof solid, or does it have a sun roof?: ')
+
+# Pass user input into Automobile class.
+m1 = Automobile(a,b,c,d,e,f)
+
+# Execute print method from Automobile class.
+m1.out()
+
